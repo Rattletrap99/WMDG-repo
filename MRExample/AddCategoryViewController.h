@@ -30,7 +30,7 @@
 
 
 
--(void)setColorChip;
+//-(void)setColorChip;
 
 @property (strong, nonatomic) UIColor *colorForColorView;
 

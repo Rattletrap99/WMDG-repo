@@ -33,7 +33,7 @@ NSMutableArray *array;
     
 	// Do any additional setup after loading the view.
     self.catTextField.delegate = self;
-    [self.pickerImageView setUserInteractionEnabled:YES];
+//    [self.picker setUserInteractionEnabled:YES];
     
     // ********************I put this NSLog here to check the status of the property self.colorView
     
@@ -53,22 +53,79 @@ NSMutableArray *array;
 }
 
 
-//-(void)setColorChip // ********************This is where the backgroundColor of self.colorView should be set
-//{
-//    NSLog(@"colorForColorView is %@",self.colorForColorView);
-//    NSLog(@"Color chip is %@",self.colorChip); //_colorView	UIView *	nil	0x00000000
-//    
-//    self.colorChip = [self.view viewWithTag:201];
-//    NSLog(@"Color chip is %@",self.colorChip); //_colorView	UIView *	nil	0x00000000
-//
-//    self.colorChip.layer.cornerRadius = 6;
-//
-//    [self.colorChip setBackgroundColor:self.colorForColorView];
-//    
-////    NSLog(@"Color view is %@",self.colorChip); //_colorView	UIView *	nil	0x00000000
-//
-//    NSLog(@"Color view color is %@",self.colorChip.backgroundColor);
-//}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSSet *allTouches = [event allTouches];
+    
+    if ([allTouches count] != 1)
+        return;
+    
+    UIImageView *pickerImageView = [self.view viewWithTag:100];
+    
+    UITouch *touch = [[allTouches allObjects] objectAtIndex:0];
+    CGPoint p = [touch locationInView:self.view];
+    if (CGRectContainsPoint(pickerImageView.frame, p))
+    {
+//        printf("Hit gradient!\n");
+        p = [touch locationInView:pickerImageView];
+        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel.png"]
+                                    xLoc:p.x
+                                    yLoc:p.y];
+        
+        UIView *display = [self.view viewWithTag:200]; // representative color
+        [display setBackgroundColor:c];
+    }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSSet *allTouches = [event allTouches];
+    
+    if ([allTouches count] != 1)
+        return;
+    
+    UIImageView *pickerImageView = [self.view viewWithTag:100];
+    
+    UITouch *touch = [[allTouches allObjects] objectAtIndex:0];
+    CGPoint p = [touch locationInView:self.view];
+    if (CGRectContainsPoint(pickerImageView.frame, p))
+    {
+//        printf("Hit gradient!\n");
+        p = [touch locationInView:pickerImageView];
+        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel.png"]
+                                    xLoc:p.x
+                                    yLoc:p.y];
+        
+        UIView *display = [self.view viewWithTag:200]; // representative color
+        [display setBackgroundColor:c];
+    }
+}
+
+
+
+- (UIColor*)getPixelColor:(UIImage *)image xLoc:(int)x yLoc:(int)y
+{
+    CFDataRef pixelData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage));
+    const UInt8* data = CFDataGetBytePtr(pixelData);
+    if (x < 0 || x >= image.size.width || y < 0 || y >= image.size.height)
+    {
+        CFRelease(pixelData);
+        return [UIColor whiteColor];
+    }
+    int pixelInfo = ((image.size.width  * y) + x ) * 4;
+    
+    UInt8 red = data[pixelInfo];
+    UInt8 green = data[(pixelInfo + 1)];
+    UInt8 blue = data[pixelInfo + 2];
+    UInt8 alpha = data[pixelInfo + 3];
+    CFRelease(pixelData);
+    
+    UIColor* color = [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha/255.0f];
+    
+    return color;
+}
+
+
 
 - (IBAction)saveButton:(UIBarButtonItem *)sender
 {

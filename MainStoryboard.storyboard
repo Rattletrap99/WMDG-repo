@@ -791,14 +791,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Color Wheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="yuY-TQ-ZHy" customClass="ColorPickerView">
-                                <rect key="frame" x="20" y="252" width="280" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view tag="201" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-YA-FWz" customClass="ColorPickerView">
+                            <view tag="200" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-YA-FWz" customClass="ColorPickerView">
                                 <rect key="frame" x="236" y="164" width="64" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Color Wheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-sX-9Un">
+                                <rect key="frame" x="20" y="249" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -818,7 +818,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="cancelButton" destination="XHz-em-mVr" id="Y85-PF-jmn"/>
                         <outlet property="catTextField" destination="2iH-FY-eq9" id="22K-yQ-khg"/>
                         <outlet property="colorChip" destination="p6h-YA-FWz" id="pLK-MY-sfx"/>
-                        <outlet property="pickerImageView" destination="yuY-TQ-ZHy" id="oSR-nX-Jux"/>
+                        <outlet property="pickerImageView" destination="i0R-sX-9Un" id="GAd-IL-W0Z"/>
                         <outlet property="saveButton" destination="HDq-1x-LQR" id="mWl-EO-Hbm"/>
                     </connections>
                 </viewController>
