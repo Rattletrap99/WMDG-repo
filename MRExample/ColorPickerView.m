@@ -30,12 +30,32 @@ AddCategoryViewController *addCatVC;
     self.pickedColor = [self colorOfPoint:loc];
     NSLog(@"Touches began");
     
-    addCatVC = [[AddCategoryViewController alloc]init];
-    addCatVC.colorForColorView = self.pickedColor;
+//    addCatVC = [[AddCategoryViewController alloc]init];
+//    addCatVC.colorForColorView = self.pickedColor;
+    
+    [self.colorChip setBackgroundColor:self.pickedColor];
+    NSLog(@"Chip color is %@",self.colorChip.backgroundColor);
+    
     
     NSLog(@"Picked color is %@",self.pickedColor);
-    [addCatVC setColorview];
+//    [addCatVC setColorChip];
 }
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint loc = [touch locationInView:self];
+    self.pickedColor = [self colorOfPoint:loc];
+    NSLog(@"Touches moved");
+    
+    [self.colorChip setBackgroundColor:self.pickedColor];
+    NSLog(@"Chip color is %@",self.colorChip.backgroundColor);
+
+    
+    NSLog(@"Picked color is %@",self.pickedColor);
+//    [addCatVC setColorChip];
+}
+
 
 //-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 //{

@@ -15,6 +15,7 @@
 @interface ColorPickerView : UIImageView
 
 @property (strong,nonatomic) UIColor *pickedColor;
+@property (strong,nonatomic) UIView *colorChip;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 

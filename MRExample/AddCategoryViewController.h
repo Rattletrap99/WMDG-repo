@@ -30,13 +30,13 @@
 
 
 
--(void)setColorview;
+-(void)setColorChip;
 
 @property (strong, nonatomic) UIColor *colorForColorView;
 
 @property (strong, nonatomic) IBOutlet UITextField *catTextField;
 
-@property (weak, nonatomic) IBOutlet UIView *colorView;
+@property (weak, nonatomic) IBOutlet UIView *colorChip;
 
 @property (strong, nonatomic) NSMutableArray *usedColorsArray;
 
