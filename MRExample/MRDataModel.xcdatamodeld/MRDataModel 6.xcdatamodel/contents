@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SearchSpecs" representedClassName="SearchSpecs" syncable="YES">
+        <attribute name="activityOfInterest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="benchmarkActivity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="benchmarkCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryOfInterest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="TimedActivity" representedClassName="TimedActivity" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stopTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="WMDGActivity" representedClassName="ListActivity" syncable="YES">
+        <attribute name="activityCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activityName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WMDGActivity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SearchSpecs" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TimedActivity" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

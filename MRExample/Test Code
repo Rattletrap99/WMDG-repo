@@ -1,0 +1,198 @@
+//
+//  UIView+UIView_ColorOfPoint.m
+//  WMDGx
+//
+//
+
+#import "UIView+UIView_ColorOfPoint.h"
+#import <QuartzCore/QuartzCore.h>
+
+
+@implementation UIView (UIView_ColorOfPoint)
+
+-(UIColor *) colorOfPoint:(CGPoint)point
+{
+    unsigned char pixel[4] = {0};
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(pixel,
+                                                 1, 1, 8, 4, colorSpace, (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
+    
+    CGContextTranslateCTM(context, -point.x, -point.y);
+    
+    [self.layer renderInContext:context];
+    
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    UIColor *color = [UIColor colorWithRed:pixel[0]/255.0
+                                     green:pixel[1]/255.0 blue:pixel[2]/255.0
+                                     alpha:pixel[3]/255.0];
+    return color;
+}
+
+@end
+
+
+
+
+-----------------------------------------
+
+
+//
+//  ColorPickerView.m
+//  WMDGx
+//
+//
+
+#import "ColorPickerView.h"
+
+AddCategoryViewController *addCatVC;
+
+@implementation ColorPickerView
+
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint loc = [touch locationInView:self];
+    self.pickedColor = [self colorOfPoint:loc];
+    NSLog(@"Touches began");
+    
+    //******************** For sending color info to setColorView in AddCategoryViewController
+    addCatVC = [[AddCategoryViewController alloc]init];
+    addCatVC.colorForColorView = self.pickedColor;
+    
+    NSLog(@"Picked color is %@",self.pickedColor);
+    
+    //******************** Call the method in AddCategoryViewController, which should display the color of the current pixel
+    [addCatVC setColorview];
+}
+
+
+@end
+
+
+
+--------------------------------
+
+
+//
+//  AddCategoryViewController.m
+//  WMDGx
+//
+//
+
+#import "AddCategoryViewController.h"
+
+@interface AddCategoryViewController ()
+
+@end
+
+@implementation AddCategoryViewController
+
+NSMutableArray *array;
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+	// Do any additional setup after loading the view.
+    self.catTextField.delegate = self;
+    [self.pickerImageView setUserInteractionEnabled:YES];
+    
+    self.colorView.layer.cornerRadius = 6;
+    
+    // ********************I put this NSLog here to check the status of the property self.colorView
+    
+    NSLog(@"Color view is %@",self.colorView);//_colorView	UIView * 0x8a63d30 0x08a63d30 (from Variables View)
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.catTextField resignFirstResponder];
+    return YES;
+}
+
+
+-(void)setColorview // ********************This is where the backgroundColor of self.colorView should be set
+{
+    NSLog(@"colorForColorView is %@",self.colorForColorView);
+    
+    NSLog(@"Color view is %@",self.colorView); //_colorView	UIView *	nil	0x00000000 (from Variables View)
+    
+    [self.colorView setBackgroundColor:self.colorForColorView]; //colorView should display the color, but doesn't
+    
+    NSLog(@"Color view is %@",self.colorView); //_colorView	UIView *	nil	0x00000000 (from Variables View)
+    
+    NSLog(@"Color view color is %@",self.colorView.backgroundColor);
+}
+
+- (IBAction)saveButton:(UIBarButtonItem *)sender
+{
+    if (self.catTextField.text.length < 1)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No category created"
+                                                        message:@"Please create a new category"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    else if (!self.colorView.backgroundColor)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No color selected"
+                                                        message:@"Please select a color for your new category"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
+        self.thisCategory = [WMDGCategory MR_createInContext:localContext];
+        self.thisCategory.name = [self.catTextField.text uppercaseString];
+        self.thisCategory.color = self.colorView.backgroundColor;
+        [localContext MR_saveToPersistentStoreAndWait];
+        [self.thisCell setUserInteractionEnabled:NO];
+        [self.delegate addCatControllerDidSave];
+    }
+}
+
+- (IBAction)cancelButton:(UIBarButtonItem *)sender
+{
+    [self.delegate addCatControllerDidCancel:self.thisCategory];
+    
+}
+
+@end
+
+
+

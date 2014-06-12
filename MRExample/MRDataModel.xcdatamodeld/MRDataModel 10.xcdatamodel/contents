@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CatColor" representedClassName="CatColor" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="idNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isTaken" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="SearchSpecs" representedClassName="SearchSpecs" syncable="YES">
+        <attribute name="activityOfInterest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="benchmarkActivity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="benchmarkCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryOfInterest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="TimedActivity" representedClassName="TimedActivity" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stopTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="WMDGActivity" representedClassName="WMDGActivity" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WMDGCategory" inverseName="activities" inverseEntity="WMDGCategory" syncable="YES"/>
+    </entity>
+    <entity name="WMDGCategory" representedClassName="WMDGCategory" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="isItNew" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WMDGActivity" inverseName="toCategory" inverseEntity="WMDGActivity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SearchSpecs" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TimedActivity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="WMDGActivity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="WMDGCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CatColor" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
