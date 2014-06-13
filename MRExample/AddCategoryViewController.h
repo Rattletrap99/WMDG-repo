@@ -22,9 +22,9 @@
 
 @end
 
-@interface AddCategoryViewController : UIViewController <UITextFieldDelegate>
+@interface AddCategoryViewController : UIViewController <UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
-// ,UICollectionViewDataSource,UICollectionViewDelegate
+//
 
 //@property (strong,nonatomic) ColorPickerView *cpv;
 
@@ -40,11 +40,10 @@
 
 @property (strong, nonatomic) NSMutableArray *usedColorsArray;
 
-//@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *pickerImageView;
 
-@property (strong,nonatomic) UICollectionViewCell *thisCell;
 
 @property (strong, nonatomic) WMDGCategory *thisCategory;
 

@@ -33,9 +33,7 @@ NSMutableArray *array;
     
 	// Do any additional setup after loading the view.
     self.catTextField.delegate = self;
-//    [self.picker setUserInteractionEnabled:YES];
-    
-    // ********************I put this NSLog here to check the status of the property self.colorView
+    self.myCollectionView.delegate = self;
     
     NSLog(@"Color view is %@",self.colorChip);//_colorView	UIView *	0x8a63d30	0x08a63d30
 }
@@ -52,6 +50,37 @@ NSMutableArray *array;
     return YES;
 }
 
+#pragma mark Collection View stuff
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section
+{
+    NSFetchedResultsController *colorFRC = [WMDGCategory MR_fetchAllSortedBy:@"name" ascending:NO withPredicate:nil groupBy:nil delegate:nil];
+    return colorFRC.fetchedObjects.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"cvCell";
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    NSFetchedResultsController *colorFRC = [WMDGCategory MR_fetchAllSortedBy:@"name" ascending:NO withPredicate:nil groupBy:nil delegate:nil];
+    WMDGCategory *thisCategory = [colorFRC objectAtIndexPath:indexPath];
+    
+    [cell setBackgroundColor:thisCategory.color];
+    [cell.layer setCornerRadius:7.0f];
+    [cell setUserInteractionEnabled:YES];
+
+    return cell;
+}
+
+
+#pragma mark Color Picker stuff
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -73,6 +102,7 @@ NSMutableArray *array;
                                     yLoc:p.y];
         
         UIView *display = [self.view viewWithTag:200]; // representative color
+        [display.layer setCornerRadius:20.0f];
         [display setBackgroundColor:c];
     }
 }
@@ -97,6 +127,7 @@ NSMutableArray *array;
                                     yLoc:p.y];
         
         UIView *display = [self.view viewWithTag:200]; // representative color
+        [display.layer setCornerRadius:20.0f];
         [display setBackgroundColor:c];
     }
 }
@@ -125,6 +156,7 @@ NSMutableArray *array;
     return color;
 }
 
+#pragma mark Save and Cancel Buttons
 
 
 - (IBAction)saveButton:(UIBarButtonItem *)sender
@@ -155,7 +187,7 @@ NSMutableArray *array;
         self.thisCategory.name = [self.catTextField.text uppercaseString];
         self.thisCategory.color = self.colorChip.backgroundColor;
         [localContext MR_saveToPersistentStoreAndWait];
-        [self.thisCell setUserInteractionEnabled:NO];
+//        [self.thisCell setUserInteractionEnabled:NO];
         [self.delegate addCatControllerDidSave];
     }
 }
