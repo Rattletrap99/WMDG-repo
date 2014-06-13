@@ -60,7 +60,7 @@ NSMutableArray *array;
     if ([allTouches count] != 1)
         return;
     
-    UIImageView *pickerImageView = [self.view viewWithTag:100];
+    UIView *pickerImageView = [self.view viewWithTag:100];
     
     UITouch *touch = [[allTouches allObjects] objectAtIndex:0];
     CGPoint p = [touch locationInView:self.view];
@@ -68,7 +68,7 @@ NSMutableArray *array;
     {
 //        printf("Hit gradient!\n");
         p = [touch locationInView:pickerImageView];
-        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel.png"]
+        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel original small.png"]
                                     xLoc:p.x
                                     yLoc:p.y];
         
@@ -84,7 +84,7 @@ NSMutableArray *array;
     if ([allTouches count] != 1)
         return;
     
-    UIImageView *pickerImageView = [self.view viewWithTag:100];
+    UIView *pickerImageView = [self.view viewWithTag:100];
     
     UITouch *touch = [[allTouches allObjects] objectAtIndex:0];
     CGPoint p = [touch locationInView:self.view];
@@ -92,7 +92,7 @@ NSMutableArray *array;
     {
 //        printf("Hit gradient!\n");
         p = [touch locationInView:pickerImageView];
-        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel.png"]
+        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel original small.png"]
                                     xLoc:p.x
                                     yLoc:p.y];
         

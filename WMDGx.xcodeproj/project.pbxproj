@@ -13,6 +13,7 @@
 		CD773982192FA62200EA982D /* WMDGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD773981192FA62200EA982D /* WMDGCategory.m */; };
 		CD7739871931272300EA982D /* CustomCatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7739861931272300EA982D /* CustomCatCell.xib */; };
 		CD77398A193127E400EA982D /* CustomCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD773989193127E400EA982D /* CustomCatCell.m */; };
+		CD8CCEA6194A6E07003FF815 /* Color Wheel original small.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */; };
 		CD9712BC1923F7E000362D0A /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9712BB1923F7E000362D0A /* CustomCell.xib */; };
 		CD9712BF1924031500362D0A /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9712BE1924031500362D0A /* CustomCell.m */; };
 		CD9FE08D189F1EA100C59F81 /* FakePie1.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9FE08C189F1EA100C59F81 /* FakePie1.png */; };
@@ -117,6 +118,7 @@
 		CD773989193127E400EA982D /* CustomCatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCatCell.m; sourceTree = "<group>"; };
 		CD7CC8E918B6E23F00C4E9F4 /* MRDataModel 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MRDataModel 6.xcdatamodel"; sourceTree = "<group>"; };
 		CD80429018BCF9E20026190F /* MRDataModel 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MRDataModel 8.xcdatamodel"; sourceTree = "<group>"; };
+		CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Color Wheel original small.png"; sourceTree = "<group>"; };
 		CD9712BB1923F7E000362D0A /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CD9712BD1924031500362D0A /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		CD9712BE1924031500362D0A /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 		CDE613F01908AE5D00187C30 /* Grafix */ = {
 			isa = PBXGroup;
 			children = (
+				CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */,
 				CD6D6365194816C6000DE1A1 /* Color Wheel.png */,
 				CD3704DA193194CE009E1B34 /* Paper background.png */,
 				CDE6145E190DBABB00187C30 /* HomeView Window.png */,
@@ -633,6 +636,7 @@
 				CDD967DA18426B0F00D99999 /* MainStoryboard.storyboard in Resources */,
 				CD6D6366194816C6000DE1A1 /* Color Wheel.png in Resources */,
 				CDE61404190AE16500187C30 /* New CvsC button.png in Resources */,
+				CD8CCEA6194A6E07003FF815 /* Color Wheel original small.png in Resources */,
 				CDE613F21908AE9100187C30 /* Glass button 1.png in Resources */,
 				CDE6140E190AEF3F00187C30 /* AvsA button gray.png in Resources */,
 				CD3704DB193194CE009E1B34 /* Paper background.png in Resources */,

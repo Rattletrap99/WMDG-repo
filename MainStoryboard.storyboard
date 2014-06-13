@@ -795,7 +795,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="236" y="164" width="64" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Color Wheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-sX-9Un">
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Color Wheel original small.png" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-sX-9Un" customClass="UIview">
                                 <rect key="frame" x="20" y="249" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -846,7 +846,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="Color Wheel.png" width="560" height="560"/>
+        <image name="Color Wheel original small.png" width="280" height="280"/>
         <image name="HomeView Window.png" width="280" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
