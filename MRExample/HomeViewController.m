@@ -139,6 +139,8 @@ NSInteger pulseCycle = 0;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     int count = [WMDGActivity MR_countOfEntities];
+    NSLog(@"Number of activities is %d",count);
+
     return count;
 }
 
@@ -160,7 +162,11 @@ NSInteger pulseCycle = 0;
 -(void)tableView:(UITableView *)tableView willDisplayCell:(CustomHVCCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.thisParticularActivity = [actFRC objectAtIndexPath:indexPath];
+    
+    
+    
     NSPredicate *categoryFinderPredicate = [NSPredicate predicateWithFormat:@"name == %@", self.thisParticularActivity.category];
+    
     self.thisParticularCategory = [WMDGCategory MR_findFirstWithPredicate:categoryFinderPredicate];
 
     UIView* backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -171,8 +177,6 @@ NSInteger pulseCycle = 0;
     {
         view.backgroundColor = [UIColor clearColor];
     }
-
-
     
     UIColor *borderColor = self.thisParticularCategory.color;
     [self.thisCustomHVCCell.contentView setBackgroundColor:[UIColor blackColor]];
@@ -182,14 +186,14 @@ NSInteger pulseCycle = 0;
 
     
     
-    self.thisCustomHVCCell.hvcCellActivityLabel.font = [UIFont boldSystemFontOfSize:22];
+    self.thisCustomHVCCell.hvcCellActivityLabel.font = [UIFont systemFontOfSize:32];
     self.thisCustomHVCCell.hvcCellActivityLabel.textColor = self.thisParticularCategory.color;
     self.thisCustomHVCCell.hvcCellActivityLabel.text = [self.thisParticularActivity.name capitalizedString];
     
 
     
     
-    self.thisCustomHVCCell.hvcCellCategoryLabel.font = [UIFont boldSystemFontOfSize:16];
+    self.thisCustomHVCCell.hvcCellCategoryLabel.font = [UIFont systemFontOfSize:12];
     self.thisCustomHVCCell.hvcCellCategoryLabel.textColor = self.thisParticularCategory.color;
     self.thisCustomHVCCell.hvcCellCategoryLabel.text = [self.thisParticularCategory.name uppercaseString];
     
@@ -206,7 +210,7 @@ NSInteger pulseCycle = 0;
 
     
     [self stopBlinkTimer];
-    [self zeroTimer];
+//    [self zeroTimer];
     
     NSIndexPath *thisIndexPath = indexPath;
     if (lastIndexPath)
@@ -276,16 +280,6 @@ NSInteger pulseCycle = 0;
         // Log previousActivityDuration
         self.previousTimedActivity.duration = @(previousActivityDuration);
         
-        NSLog(@"previousTimedActivity was %@",self.previousTimedActivity.name);
-        NSLog(@"previousTimedActivity.stopTime is %@",self.previousTimedActivity.stopTime);
-        NSLog(@"previousTimedActivity.duration is %@",self.previousTimedActivity.duration);
-        
-        NSLog(@"currentTimedActivity is %@",self.currentTimedActivity.name);
-        NSLog(@"currentTimedActivity.stopTime is %@",self.currentTimedActivity.stopTime);
-        NSLog(@"currentTimedActivity.duration is %@",self.currentTimedActivity.duration);
-        
-//        log everything!
-        
        // Save the current timed activity and the previous timed activity (including duration) to store
         
         [localContext MR_saveToPersistentStoreAndWait];
@@ -340,7 +334,7 @@ NSInteger pulseCycle = 0;
 {
     actFRC = [WMDGActivity MR_fetchAllSortedBy:@"category,name"
                                   ascending:YES withPredicate:nil
-                                    groupBy:@"category"
+                                    groupBy:nil
                                    delegate:nil];
     [self.myTableView reloadData];
 }
@@ -384,8 +378,10 @@ NSInteger pulseCycle = 0;
     NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
     [localContext MR_saveToPersistentStoreAndWait];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    [self refreshData];
+    int numberOfActivities = [WMDGActivity MR_countOfEntities];
     
+    NSLog(@"Number of activities is %d",numberOfActivities);
+    [self refreshData];
 }
 
 -(void) addActivityViewControllerDidCancel:(WMDGActivity *) activityToDelete
@@ -395,7 +391,7 @@ NSInteger pulseCycle = 0;
     [localContext MR_saveToPersistentStoreAndWait];
 
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-//    [self refreshData];
+    [self refreshData];
 }
 
 

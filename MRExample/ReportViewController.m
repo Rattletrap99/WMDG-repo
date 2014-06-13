@@ -761,7 +761,7 @@ int barWidth = self.chartView.bounds.size.width /((2 * 2) -1);
 int focusBarEndHeight = (self.chartView.bounds.size.height - 95) * (focusItemPercent / 100);
 int benchmarkBarEndHeight = (self.chartView.bounds.size.height - 95) * (benchmarkItemPercent / 100);
 
-
+// Create the bars
 
 for (thisRiser in self.chartView.subviews)
 {
@@ -779,8 +779,11 @@ for (thisRiser in self.chartView.subviews)
                                 options: UIViewAnimationCurveEaseOut
                              animations:^
              {
+                 // Starting state
                  thisRiser.frame = CGRectMake(35, self.chartView.frame.size.height, barWidth, 0);
                  thisRiser.backgroundColor = startColor1;
+                 
+                 // End state
                  thisRiser.frame = CGRectMake(35, self.chartView.frame.size.height, barWidth, -focusBarEndHeight);
                  thisRiser.backgroundColor = endColor1;
                  thisRiser.layer.shadowColor = [[UIColor blackColor] CGColor];

@@ -65,11 +65,11 @@
 
     WMDGCategory *funCategory = [WMDGCategory MR_createInContext:localContext];
     funCategory.name = @"FUN";
-    funCategory.color = [UIColor colorWithRed:0.075f green:0.749f blue:0.800f alpha:1.00f];
+    funCategory.color = [UIColor colorWithRed:0.832f green:0.852f blue:0.910f alpha:1.00f];
     
     WMDGCategory *workCategory = [WMDGCategory MR_createInContext:localContext];
     workCategory.name = @"WORK";
-    workCategory.color = [UIColor colorWithRed:0.847f green:0.082f blue:0.067f alpha:1.00f];
+    workCategory.color = [UIColor colorWithRed:0.910f green:0.804f blue:0.817f alpha:1.00f];
     
     [localContext MR_saveToPersistentStoreAndWait];
 }
@@ -171,13 +171,15 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
-
         }
         
         else
         {
+//            NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
+//            self.thisActivity = [WMDGActivity MR_createInContext:localContext];
             self.thisActivity.name = self.activityField.text;
             self.thisActivity.category = self.thisCategory.name;
+//            [localContext MR_saveToPersistentStoreAndWait];
             
             NSLog(@"Category name is %@", self.thisCategory.name);
             NSLog(@"Activity name is %@", self.thisActivity.name);
