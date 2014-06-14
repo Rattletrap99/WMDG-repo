@@ -97,7 +97,7 @@ NSMutableArray *array;
     {
 //        printf("Hit gradient!\n");
         p = [touch locationInView:pickerImageView];
-        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel original small.png"]
+        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"ColorPicker280.png"]
                                     xLoc:p.x
                                     yLoc:p.y];
         
@@ -122,7 +122,7 @@ NSMutableArray *array;
     {
 //        printf("Hit gradient!\n");
         p = [touch locationInView:pickerImageView];
-        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"Color Wheel original small.png"]
+        UIColor *c = [self getPixelColor:[UIImage imageNamed:@"ColorPicker280.png"]
                                     xLoc:p.x
                                     yLoc:p.y];
         

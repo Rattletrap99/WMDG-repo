@@ -21,6 +21,7 @@
 		CD9FE09A18A4AA6300C59F81 /* CvsCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FE09918A4AA6300C59F81 /* CvsCViewController.m */; };
 		CD9FE09D18A4AACE00C59F81 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FE09C18A4AACE00C59F81 /* DetailViewController.m */; };
 		CD9FE0A318A4ABB100C59F81 /* CustomTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FE0A218A4ABB100C59F81 /* CustomTimeViewController.m */; };
+		CDAB0585194BC5F10074BC01 /* ColorPicker280.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAB0584194BC5F10074BC01 /* ColorPicker280.png */; };
 		CDBED33C1946B26E002B177B /* CatColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBED33B1946B26E002B177B /* CatColor.m */; };
 		CDBED3431947FD5D002B177B /* ColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBED3421947FD5D002B177B /* ColorPickerView.m */; };
 		CDBED3491948054B002B177B /* UIView+UIView_ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBED3481948054B002B177B /* UIView+UIView_ColorOfPoint.m */; };
@@ -132,6 +133,7 @@
 		CD9FE0A118A4ABB100C59F81 /* CustomTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTimeViewController.h; sourceTree = "<group>"; };
 		CD9FE0A218A4ABB100C59F81 /* CustomTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTimeViewController.m; sourceTree = "<group>"; };
 		CDA2C685187E503F00E1AABB /* MRDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MRDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		CDAB0584194BC5F10074BC01 /* ColorPicker280.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPicker280.png; sourceTree = "<group>"; };
 		CDB38E8518A57609006AEEEA /* MRDataModel 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MRDataModel 5.xcdatamodel"; sourceTree = "<group>"; };
 		CDBED33A1946B26E002B177B /* CatColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CatColor.h; path = MRExample/CatColor.h; sourceTree = "<group>"; };
 		CDBED33B1946B26E002B177B /* CatColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CatColor.m; path = MRExample/CatColor.m; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 		CDE613F01908AE5D00187C30 /* Grafix */ = {
 			isa = PBXGroup;
 			children = (
+				CDAB0584194BC5F10074BC01 /* ColorPicker280.png */,
 				CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */,
 				CD6D6365194816C6000DE1A1 /* Color Wheel.png */,
 				CD3704DA193194CE009E1B34 /* Paper background.png */,
@@ -636,6 +639,7 @@
 				CDD967DA18426B0F00D99999 /* MainStoryboard.storyboard in Resources */,
 				CD6D6366194816C6000DE1A1 /* Color Wheel.png in Resources */,
 				CDE61404190AE16500187C30 /* New CvsC button.png in Resources */,
+				CDAB0585194BC5F10074BC01 /* ColorPicker280.png in Resources */,
 				CD8CCEA6194A6E07003FF815 /* Color Wheel original small.png in Resources */,
 				CDE613F21908AE9100187C30 /* Glass button 1.png in Resources */,
 				CDE6140E190AEF3F00187C30 /* AvsA button gray.png in Resources */,

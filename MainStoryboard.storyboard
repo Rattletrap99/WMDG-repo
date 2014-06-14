@@ -543,7 +543,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMJ-wV-rUE">
-                                <rect key="frame" x="88" y="222" width="145" height="25"/>
+                                <rect key="frame" x="88" y="219" width="145" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Stop Timer">
@@ -795,7 +795,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="248" y="164" width="52" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Color Wheel original small.png" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-sX-9Un" customClass="UIview">
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ColorPicker280.png" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-sX-9Un" customClass="UIview">
                                 <rect key="frame" x="20" y="249" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -872,7 +872,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="Color Wheel original small.png" width="280" height="280"/>
+        <image name="ColorPicker280.png" width="280" height="280"/>
         <image name="HomeView Window.png" width="280" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

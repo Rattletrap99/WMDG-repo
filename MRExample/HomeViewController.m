@@ -48,6 +48,11 @@ NSInteger pulseCycle = 0;
     [self.dumpMemoryButton setHidden:NO];
     [self.durationOrSleepLabel setHidden:YES];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.timeStopperButton.layer.borderWidth = 3.0f;
+    self.timeStopperButton.layer.cornerRadius = 8.0f;
+    self.timeStopperButton.layer.borderColor = [[UIColor redColor] CGColor];
+
 
     
     NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
@@ -307,27 +312,27 @@ NSInteger pulseCycle = 0;
 
 // Remove option for finished product
 
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete)
-//    {
-//        NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
-//        WMDGActivity *activityToTrash = [actFRC objectAtIndexPath:indexPath];
-//        
-//        // Delete the row from the data source
-//        
-//        [activityToTrash MR_deleteEntity];
-//        
-//        // Now trash everything with the same name in the persistent store
-//        // Put up an alert warning of complete data loss specific to this activity
-//        
-//        NSPredicate *deletionPredicate = [NSPredicate predicateWithFormat:@"name == %@",activityToTrash.name];
-//        
-//        [TimedActivity MR_deleteAllMatchingPredicate:deletionPredicate];
-//        [localContext MR_saveToPersistentStoreAndWait];
-//        [self refreshData];
-//    }
-//}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
+        WMDGActivity *activityToTrash = [actFRC objectAtIndexPath:indexPath];
+        
+        // Delete the row from the data source
+        
+        [activityToTrash MR_deleteEntity];
+        
+        // Now trash everything with the same name in the persistent store
+        // Put up an alert warning of complete data loss specific to this activity
+        
+        NSPredicate *deletionPredicate = [NSPredicate predicateWithFormat:@"name == %@",activityToTrash.name];
+        
+        [TimedActivity MR_deleteAllMatchingPredicate:deletionPredicate];
+        [localContext MR_saveToPersistentStoreAndWait];
+        [self refreshData];
+    }
+}
 
 
 -(void) refreshData

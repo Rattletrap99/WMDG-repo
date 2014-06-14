@@ -177,7 +177,7 @@
         {
 //            NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
 //            self.thisActivity = [WMDGActivity MR_createInContext:localContext];
-            self.thisActivity.name = self.activityField.text;
+            self.thisActivity.name = [self.activityField.text capitalizedString];
             self.thisActivity.category = self.thisCategory.name;
 //            [localContext MR_saveToPersistentStoreAndWait];
             
