@@ -31,7 +31,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *topPanelView;
 
-@property (weak, nonatomic) IBOutlet UIImageView *windowView;
+@property (weak, nonatomic) IBOutlet UIView *windowView;
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) IBOutlet UILabel *durationOrSleepLabel;

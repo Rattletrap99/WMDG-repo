@@ -84,6 +84,12 @@ NSMutableArray *array;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+    if([self.catTextField isFirstResponder])
+    {
+        [self.catTextField resignFirstResponder];
+    }
+
     NSSet *allTouches = [event allTouches];
     
     if ([allTouches count] != 1)

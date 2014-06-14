@@ -23,7 +23,9 @@ NSFetchedResultsController *actFRC;
 
 NSFetchedResultsController *categoryFRC;
 
+
 TimedActivity *topActivity;
+WMDGCategory *topCategory;
 
 NSString *cellLabelTempText;
 //    NSTimer *timer;
@@ -31,17 +33,32 @@ int tapCounter;
 NSIndexPath *lastIndexPath;
 CustomHVCCell *selectedCell;
 NSInteger pulseCycle = 0;
-
+UIColor *windowViewBGColor;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    actFRC = [WMDGActivity MR_fetchAllSortedBy:@"category,name" ascending:YES withPredicate:nil groupBy:nil delegate:nil];
+//    actFRC = [WMDGActivity MR_fetchAllSortedBy:@"category,name" ascending:YES withPredicate:nil groupBy:nil delegate:nil];
+//    topActivity = [TimedActivity MR_findFirstOrderedByAttribute:@"startTime" ascending:NO];
+//    
+//    NSPredicate *topCatPredicate = [NSPredicate predicateWithFormat:@"name == %@",topActivity.category];
+//    
+//    topCategory = [WMDGCategory MR_findFirstWithPredicate:topCatPredicate];
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     
+    self.durationOrSleepLabel.textColor = [UIColor blackColor];
+    self.currentlyTimedLabel.textColor = [UIColor blackColor];
+
+
+    
     [self.topPanelView addSubview:self.windowView];
+    self.windowView.layer.cornerRadius = 20.0f;
+    self.windowView.layer.borderWidth = 4.0f;
+    self.windowView.layer.borderColor = [[UIColor blackColor] CGColor];
+
+    
     [self.windowView addSubview:self.durationOrSleepLabel];
     [self.windowView addSubview:self.currentlyTimedLabel];
     [self.windowView addSubview:self.currentTimingLabel];
@@ -49,7 +66,7 @@ NSInteger pulseCycle = 0;
     [self.durationOrSleepLabel setHidden:YES];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.timeStopperButton.layer.borderWidth = 3.0f;
+    self.timeStopperButton.layer.borderWidth = 2.0f;
     self.timeStopperButton.layer.cornerRadius = 8.0f;
     self.timeStopperButton.layer.borderColor = [[UIColor redColor] CGColor];
 
@@ -59,8 +76,6 @@ NSInteger pulseCycle = 0;
     
     self.currentTimedActivity = [TimedActivity MR_findFirstOrderedByAttribute:@"startTime" ascending:NO];
     
-    NSPredicate *categoryFinderPredicate = [NSPredicate predicateWithFormat:@"name == %@", self.currentTimedActivity.category];
-    WMDGCategory *thisCategory = [WMDGCategory MR_findFirstWithPredicate:categoryFinderPredicate];
     
     
     
@@ -70,9 +85,11 @@ NSInteger pulseCycle = 0;
         if (![self.currentTimedActivity.name isEqualToString:@"Timer Sleeping"])
         {
             [self.durationOrSleepLabel setHidden:NO];
-            
-            self.durationOrSleepLabel.textColor = thisCategory.color;
-            self.currentlyTimedLabel.textColor = thisCategory.color;
+            NSPredicate *categoryFinderPredicate = [NSPredicate predicateWithFormat:@"name == %@", self.currentTimedActivity.category];
+            WMDGCategory *thisCategory = [WMDGCategory MR_findFirstWithPredicate:categoryFinderPredicate];
+            self.windowView.backgroundColor = thisCategory.color;
+            self.durationOrSleepLabel.textColor = [UIColor blackColor];
+
             
             self.currentlyTimedLabel.text = self.currentTimedActivity.name;
             
@@ -187,7 +204,7 @@ NSInteger pulseCycle = 0;
     [self.thisCustomHVCCell.contentView setBackgroundColor:[UIColor blackColor]];
     [self.thisCustomHVCCell.contentView.layer setBorderColor:borderColor.CGColor];
     [self.thisCustomHVCCell.contentView.layer setCornerRadius:20.0f];
-    [self.thisCustomHVCCell.contentView.layer setBorderWidth:6.0f];
+    [self.thisCustomHVCCell.contentView.layer setBorderWidth:4.0f];
 
     
     
@@ -293,11 +310,11 @@ NSInteger pulseCycle = 0;
         NSPredicate *categoryFinderPredicate = [NSPredicate predicateWithFormat:@"name == %@", self.currentTimedActivity.category];
         WMDGCategory *thisCategory = [WMDGCategory MR_findFirstWithPredicate:categoryFinderPredicate];
 
-        self.durationOrSleepLabel.textColor = thisCategory.color;
-        self.currentlyTimedLabel.textColor = thisCategory.color;
-        
+        self.durationOrSleepLabel.textColor = [UIColor blackColor];
+        self.currentlyTimedLabel.textColor = [UIColor blackColor];
+        self.windowView.backgroundColor = thisCategory.color;
         self.currentlyTimedLabel.text = self.currentTimedActivity.name;
-        
+        windowViewBGColor = thisCategory.color;
         
 //        [self zeroTimer];
         
@@ -564,6 +581,7 @@ NSInteger pulseCycle = 0;
     
     self.currentlyTimedLabel.text = @"Timer Sleeping";
     self.currentlyTimedLabel.textColor = [UIColor redColor];
+    self.windowView.backgroundColor = [UIColor whiteColor];
     
     [self startDurationTimer];
     [self.timeStopperButton setUserInteractionEnabled:NO];
