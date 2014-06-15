@@ -62,11 +62,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MRExample/HomeViewController.m"
-            timestampString = "424414656.81697"
+            timestampString = "424489574.280854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "407"
-            endingLineNumber = "407"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "-addActivityViewControllerDidSave"
             landmarkType = "5">
          </BreakpointContent>

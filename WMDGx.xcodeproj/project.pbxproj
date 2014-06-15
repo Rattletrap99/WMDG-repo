@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		CD16D52619424F9200819606 /* CustomHVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD16D52519424F9200819606 /* CustomHVCCell.m */; };
 		CD3704DB193194CE009E1B34 /* Paper background.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3704DA193194CE009E1B34 /* Paper background.png */; };
-		CD6D6366194816C6000DE1A1 /* Color Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6D6365194816C6000DE1A1 /* Color Wheel.png */; };
 		CD773982192FA62200EA982D /* WMDGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD773981192FA62200EA982D /* WMDGCategory.m */; };
 		CD7739871931272300EA982D /* CustomCatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7739861931272300EA982D /* CustomCatCell.xib */; };
 		CD77398A193127E400EA982D /* CustomCatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD773989193127E400EA982D /* CustomCatCell.m */; };
-		CD8CCEA6194A6E07003FF815 /* Color Wheel original small.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */; };
 		CD9712BC1923F7E000362D0A /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9712BB1923F7E000362D0A /* CustomCell.xib */; };
 		CD9712BF1924031500362D0A /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9712BE1924031500362D0A /* CustomCell.m */; };
-		CD9FE08D189F1EA100C59F81 /* FakePie1.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9FE08C189F1EA100C59F81 /* FakePie1.png */; };
 		CD9FE09718A4AA4700C59F81 /* AvsAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FE09618A4AA4700C59F81 /* AvsAViewController.m */; };
 		CD9FE09A18A4AA6300C59F81 /* CvsCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FE09918A4AA6300C59F81 /* CvsCViewController.m */; };
 		CD9FE09D18A4AACE00C59F81 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9FE09C18A4AACE00C59F81 /* DetailViewController.m */; };
@@ -75,24 +72,6 @@
 		CDE2EC661941570C00BEA3AC /* SearchSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE2EC631941570C00BEA3AC /* SearchSpecs.m */; };
 		CDE2EC671941570C00BEA3AC /* WMDGActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE2EC651941570C00BEA3AC /* WMDGActivity.m */; };
 		CDE2EC691942383B00BEA3AC /* CustomHVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE2EC681942383B00BEA3AC /* CustomHVCCell.xib */; };
-		CDE613F21908AE9100187C30 /* Glass button 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE613F11908AE9100187C30 /* Glass button 1.png */; };
-		CDE613FA1908C55800187C30 /* Report View control panel BG.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE613F91908C55800187C30 /* Report View control panel BG.png */; };
-		CDE613FC19097FAD00187C30 /* DarkBrushedMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE613FB19097FAD00187C30 /* DarkBrushedMetal.png */; };
-		CDE613FE1909836200187C30 /* BrushedAluminum.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE613FD1909836200187C30 /* BrushedAluminum.png */; };
-		CDE61402190ADEF300187C30 /* New AvsA button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61401190ADEF300187C30 /* New AvsA button.png */; };
-		CDE61404190AE16500187C30 /* New CvsC button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61403190AE16500187C30 /* New CvsC button.png */; };
-		CDE61407190AE36000187C30 /* A vs All button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61405190AE36000187C30 /* A vs All button.png */; };
-		CDE61408190AE36000187C30 /* C vs All button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61406190AE36000187C30 /* C vs All button.png */; };
-		CDE6140C190AE65000187C30 /* Report button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE6140B190AE65000187C30 /* Report button.png */; };
-		CDE6140E190AEF3F00187C30 /* AvsA button gray.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE6140D190AEF3F00187C30 /* AvsA button gray.png */; };
-		CDE61452190B2ACA00187C30 /* Larger comparison select button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61450190B2ACA00187C30 /* Larger comparison select button.png */; };
-		CDE61453190B2ACA00187C30 /* Larger Report button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61451190B2ACA00187C30 /* Larger Report button.png */; };
-		CDE61455190B33F400187C30 /* Brushed aluminum panel.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61454190B33F400187C30 /* Brushed aluminum panel.png */; };
-		CDE61457190B4DC600187C30 /* Larger Report button white.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61456190B4DC600187C30 /* Larger Report button white.png */; };
-		CDE61459190B511700187C30 /* Brushed aluminum panel beveled.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE61458190B511700187C30 /* Brushed aluminum panel beveled.png */; };
-		CDE6145B190CA40A00187C30 /* Show Graph button.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE6145A190CA40A00187C30 /* Show Graph button.png */; };
-		CDE6145D190DAC8A00187C30 /* HomeView top panel.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE6145C190DAC8A00187C30 /* HomeView top panel.png */; };
-		CDE6145F190DBABB00187C30 /* HomeView Window.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE6145E190DBABB00187C30 /* HomeView Window.png */; };
 		CDFB7AD51887279600F383BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFB7AD41887279600F383BC /* HomeViewController.m */; };
 		CDFF655C18FB2B4400579331 /* Test Code in Resources */ = {isa = PBXBuildFile; fileRef = CDFF655B18FB2B4300579331 /* Test Code */; };
 /* End PBXBuildFile section */
@@ -111,7 +90,6 @@
 		CD16D52419424F9200819606 /* CustomHVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomHVCCell.h; path = ../CustomHVCCell.h; sourceTree = "<group>"; };
 		CD16D52519424F9200819606 /* CustomHVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomHVCCell.m; path = ../CustomHVCCell.m; sourceTree = "<group>"; };
 		CD3704DA193194CE009E1B34 /* Paper background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper background.png"; sourceTree = "<group>"; };
-		CD6D6365194816C6000DE1A1 /* Color Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Color Wheel.png"; sourceTree = "<group>"; };
 		CD773980192FA62200EA982D /* WMDGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMDGCategory.h; path = MRExample/WMDGCategory.h; sourceTree = "<group>"; };
 		CD773981192FA62200EA982D /* WMDGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMDGCategory.m; path = MRExample/WMDGCategory.m; sourceTree = "<group>"; };
 		CD7739861931272300EA982D /* CustomCatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCatCell.xib; sourceTree = "<group>"; };
@@ -119,11 +97,9 @@
 		CD773989193127E400EA982D /* CustomCatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCatCell.m; sourceTree = "<group>"; };
 		CD7CC8E918B6E23F00C4E9F4 /* MRDataModel 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MRDataModel 6.xcdatamodel"; sourceTree = "<group>"; };
 		CD80429018BCF9E20026190F /* MRDataModel 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MRDataModel 8.xcdatamodel"; sourceTree = "<group>"; };
-		CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Color Wheel original small.png"; sourceTree = "<group>"; };
 		CD9712BB1923F7E000362D0A /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		CD9712BD1924031500362D0A /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		CD9712BE1924031500362D0A /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		CD9FE08C189F1EA100C59F81 /* FakePie1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FakePie1.png; sourceTree = "<group>"; };
 		CD9FE09518A4AA4700C59F81 /* AvsAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvsAViewController.h; sourceTree = "<group>"; };
 		CD9FE09618A4AA4700C59F81 /* AvsAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvsAViewController.m; sourceTree = "<group>"; };
 		CD9FE09818A4AA6300C59F81 /* CvsCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CvsCViewController.h; sourceTree = "<group>"; };
@@ -232,24 +208,6 @@
 		CDE2EC641941570C00BEA3AC /* WMDGActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDGActivity.h; sourceTree = "<group>"; };
 		CDE2EC651941570C00BEA3AC /* WMDGActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDGActivity.m; sourceTree = "<group>"; };
 		CDE2EC681942383B00BEA3AC /* CustomHVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHVCCell.xib; sourceTree = "<group>"; };
-		CDE613F11908AE9100187C30 /* Glass button 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Glass button 1.png"; sourceTree = "<group>"; };
-		CDE613F91908C55800187C30 /* Report View control panel BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Report View control panel BG.png"; sourceTree = "<group>"; };
-		CDE613FB19097FAD00187C30 /* DarkBrushedMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkBrushedMetal.png; sourceTree = "<group>"; };
-		CDE613FD1909836200187C30 /* BrushedAluminum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrushedAluminum.png; sourceTree = "<group>"; };
-		CDE61401190ADEF300187C30 /* New AvsA button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New AvsA button.png"; sourceTree = "<group>"; };
-		CDE61403190AE16500187C30 /* New CvsC button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New CvsC button.png"; sourceTree = "<group>"; };
-		CDE61405190AE36000187C30 /* A vs All button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "A vs All button.png"; sourceTree = "<group>"; };
-		CDE61406190AE36000187C30 /* C vs All button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C vs All button.png"; sourceTree = "<group>"; };
-		CDE6140B190AE65000187C30 /* Report button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Report button.png"; sourceTree = "<group>"; };
-		CDE6140D190AEF3F00187C30 /* AvsA button gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AvsA button gray.png"; sourceTree = "<group>"; };
-		CDE61450190B2ACA00187C30 /* Larger comparison select button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Larger comparison select button.png"; sourceTree = "<group>"; };
-		CDE61451190B2ACA00187C30 /* Larger Report button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Larger Report button.png"; sourceTree = "<group>"; };
-		CDE61454190B33F400187C30 /* Brushed aluminum panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brushed aluminum panel.png"; sourceTree = "<group>"; };
-		CDE61456190B4DC600187C30 /* Larger Report button white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Larger Report button white.png"; sourceTree = "<group>"; };
-		CDE61458190B511700187C30 /* Brushed aluminum panel beveled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brushed aluminum panel beveled.png"; sourceTree = "<group>"; };
-		CDE6145A190CA40A00187C30 /* Show Graph button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Show Graph button.png"; sourceTree = "<group>"; };
-		CDE6145C190DAC8A00187C30 /* HomeView top panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HomeView top panel.png"; sourceTree = "<group>"; };
-		CDE6145E190DBABB00187C30 /* HomeView Window.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HomeView Window.png"; sourceTree = "<group>"; };
 		CDFB7AD31887279600F383BC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		CDFB7AD41887279600F383BC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		CDFF655B18FB2B4300579331 /* Test Code */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Test Code"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -530,28 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				CDAB0584194BC5F10074BC01 /* ColorPicker280.png */,
-				CD8CCEA5194A6E07003FF815 /* Color Wheel original small.png */,
-				CD6D6365194816C6000DE1A1 /* Color Wheel.png */,
 				CD3704DA193194CE009E1B34 /* Paper background.png */,
-				CDE6145E190DBABB00187C30 /* HomeView Window.png */,
-				CDE6145C190DAC8A00187C30 /* HomeView top panel.png */,
-				CDE6145A190CA40A00187C30 /* Show Graph button.png */,
-				CDE61405190AE36000187C30 /* A vs All button.png */,
-				CDE6140D190AEF3F00187C30 /* AvsA button gray.png */,
-				CDE61458190B511700187C30 /* Brushed aluminum panel beveled.png */,
-				CDE61454190B33F400187C30 /* Brushed aluminum panel.png */,
-				CDE613FD1909836200187C30 /* BrushedAluminum.png */,
-				CDE61406190AE36000187C30 /* C vs All button.png */,
-				CDE613FB19097FAD00187C30 /* DarkBrushedMetal.png */,
-				CD9FE08C189F1EA100C59F81 /* FakePie1.png */,
-				CDE613F11908AE9100187C30 /* Glass button 1.png */,
-				CDE61450190B2ACA00187C30 /* Larger comparison select button.png */,
-				CDE61456190B4DC600187C30 /* Larger Report button white.png */,
-				CDE61451190B2ACA00187C30 /* Larger Report button.png */,
-				CDE61401190ADEF300187C30 /* New AvsA button.png */,
-				CDE61403190AE16500187C30 /* New CvsC button.png */,
-				CDE6140B190AE65000187C30 /* Report button.png */,
-				CDE613F91908C55800187C30 /* Report View control panel BG.png */,
 			);
 			name = Grafix;
 			sourceTree = "<group>";
@@ -631,36 +568,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDE613FA1908C55800187C30 /* Report View control panel BG.png in Resources */,
 				CDFF655C18FB2B4400579331 /* Test Code in Resources */,
-				CDE61455190B33F400187C30 /* Brushed aluminum panel.png in Resources */,
-				CDE6140C190AE65000187C30 /* Report button.png in Resources */,
-				CDE6145F190DBABB00187C30 /* HomeView Window.png in Resources */,
 				CDD967DA18426B0F00D99999 /* MainStoryboard.storyboard in Resources */,
-				CD6D6366194816C6000DE1A1 /* Color Wheel.png in Resources */,
-				CDE61404190AE16500187C30 /* New CvsC button.png in Resources */,
 				CDAB0585194BC5F10074BC01 /* ColorPicker280.png in Resources */,
-				CD8CCEA6194A6E07003FF815 /* Color Wheel original small.png in Resources */,
-				CDE613F21908AE9100187C30 /* Glass button 1.png in Resources */,
-				CDE6140E190AEF3F00187C30 /* AvsA button gray.png in Resources */,
 				CD3704DB193194CE009E1B34 /* Paper background.png in Resources */,
-				CD9FE08D189F1EA100C59F81 /* FakePie1.png in Resources */,
-				CDE61408190AE36000187C30 /* C vs All button.png in Resources */,
-				CDE613FC19097FAD00187C30 /* DarkBrushedMetal.png in Resources */,
-				CDE61452190B2ACA00187C30 /* Larger comparison select button.png in Resources */,
-				CDE613FE1909836200187C30 /* BrushedAluminum.png in Resources */,
-				CDE61459190B511700187C30 /* Brushed aluminum panel beveled.png in Resources */,
-				CDE61457190B4DC600187C30 /* Larger Report button white.png in Resources */,
 				CDE2EC691942383B00BEA3AC /* CustomHVCCell.xib in Resources */,
 				CDD9675D1842640600D99999 /* InfoPlist.strings in Resources */,
-				CDE61407190AE36000187C30 /* A vs All button.png in Resources */,
 				CD9712BC1923F7E000362D0A /* CustomCell.xib in Resources */,
 				CDD967651842640600D99999 /* Images.xcassets in Resources */,
-				CDE6145D190DAC8A00187C30 /* HomeView top panel.png in Resources */,
-				CDE61402190ADEF300187C30 /* New AvsA button.png in Resources */,
 				CD7739871931272300EA982D /* CustomCatCell.xib in Resources */,
-				CDE61453190B2ACA00187C30 /* Larger Report button.png in Resources */,
-				CDE6145B190CA40A00187C30 /* Show Graph button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

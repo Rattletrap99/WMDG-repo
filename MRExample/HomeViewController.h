@@ -54,7 +54,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *dumpMemoryButton;
 
-- (IBAction)dumpMemory:(UIButton *)sender;
 
 - (IBAction)stopTimerButton:(UIButton *)sender;
 

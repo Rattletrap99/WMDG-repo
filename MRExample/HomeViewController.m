@@ -362,15 +362,6 @@ UIColor *windowViewBGColor;
 }
 
 
-
-- (IBAction)dumpMemory:(UIButton *)sender
-{
-    NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
-    [TimedActivity MR_truncateAllInContext:localContext];
-    [localContext MR_saveToPersistentStoreAndWait];
-    [self refreshData];
-}
-
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
