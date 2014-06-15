@@ -133,7 +133,7 @@ TimedActivity *thisActivity;
                 [self.thisCustomCell.fromDateLabel setTextColor:[UIColor lightGrayColor]];
                 [self.thisCustomCell.toDateLabel setTextColor:[UIColor lightGrayColor]];
                 [self.thisCustomCell.durationLabel setTextColor:[UIColor lightGrayColor]];
-                [self.thisCustomCell.contentView setBackgroundColor:[UIColor colorWithRed:0.962f green:0.962f blue:0.962f alpha:1.00f]];
+                [self.thisCustomCell.contentView setBackgroundColor:[UIColor whiteColor]];
                 [self.thisCustomCell.contentView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
             }
     }
@@ -171,7 +171,7 @@ TimedActivity *thisActivity;
                 [self.thisCustomCell.fromDateLabel setTextColor:[UIColor lightGrayColor]];
                 [self.thisCustomCell.toDateLabel setTextColor:[UIColor lightGrayColor]];
                 [self.thisCustomCell.durationLabel setTextColor:[UIColor lightGrayColor]];
-                [self.thisCustomCell.contentView setBackgroundColor:[UIColor colorWithRed:0.962f green:0.962f blue:0.962f alpha:1.00f]];
+                [self.thisCustomCell.contentView setBackgroundColor:[UIColor whiteColor]];
                 [self.thisCustomCell.contentView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
             }
     }
